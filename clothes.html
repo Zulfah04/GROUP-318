@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothes</title>
+    <link rel="stylesheet" href="clothes.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="brand-name">MyBrand</div>
+        <div class="nav-icons">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            <a href="search.html"><i class="fas fa-search"></i></a>
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                <div class="dropdown-content">
+                    <a href="about.html">ABOUT US</a>
+                    <a href="login.html">LOGIN</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="highlight.html">Highlight</a>
+                    <a href="clothes.html">Clothes</a>
+                    <a href="accessories.html">Accessories</a>
+                    <a href="shoes.html">Shoes</a>
+                    <a href="bags.html">Bags</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Our Collections</h1>
+		
+        <div class="product-grid" id="product-grid">
+            <div class="product">
+                    <img src="miumiu-men1.jpg" alt="Men's Jacket">
+                    <h3>Men's Jacket</h3>
+                    <p>$150</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="miumiu-men2.jpg" alt="Men's T-Shirt">
+                    <h3>Men's Shoes</h3>
+                    <p>$120</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="miumiu-women1.jpg" alt="Women's Jacket">
+                    <h3>Women's Dress</h3>
+                    <p>$180</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="miumiu-women2.jpg" alt="Women's Dress">
+                    <h3>Women's Handbag</h3>
+                    <p>$250</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+				<div class="product">
+                    <img src="hm-men1.jpg" alt="Men's Sweatshirt">
+                    <h3>Men's Shirt</h3>
+                    <p>$50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="hm-men2.jpg" alt="Men's Pants">
+                    <h3>Men's Pants</h3>
+                    <p>$60</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="hm-women1.jpg" alt="Women's Top">
+                    <h3>Women's Top</h3>
+                    <p>$40</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="hm-women2.jpg" alt="Women's Skirt">
+                    <h3>Women's Skirt</h3>
+                    <p>$45</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+				<div class="product">
+                    <img src="miumiu-men1.jpg" alt="Men's Hoodie">
+                    <h3>Men's Jacket</h3>
+                    <p>$150</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="miumiu-men2.jpg" alt="Men's Sleeveless">
+                    <h3>Men's Shoes</h3>
+                    <p>$120</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="miumiu-women1.jpg" alt="Women's Hoodie">
+                    <h3>Women's Dress</h3>
+                    <p>$180</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="miumiu-women2.jpg" alt="Women's Sleeveless">
+                    <h3>Women's Handbag</h3>
+                    <p>$250</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+				<div class="product">
+                    <img src="hm-men1.jpg" alt="Padini Men's Zip-up">
+                    <h3>Men's Shirt</h3>
+                    <p>$50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="hm-men2.jpg" alt="Men's Plains">
+                    <h3>Men's Pants</h3>
+                    <p>$60</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="hm-women1.jpg" alt="Women's Blouse">
+                    <h3>Women's Top</h3>
+                    <p>$40</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="hm-women2.jpg" alt="Women's Jubah">
+                    <h3>Women's Skirt</h3>
+                    <p>$45</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+        </div>
+		
+    </div>
+	
+    <button class="zoom-btn" id="zoom-btn">Zoom In</button>
+
+    <script>
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const product = event.target.parentElement;
+            const name = product.querySelector('h3').innerText;
+            const price = parseFloat(product.querySelector('p').innerText.replace('$', ''));
+            const image = product.querySelector('img').src;
+
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItem = cart.find(item => item.name === name);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, image, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} has been added to your cart!`);
+        });
+    });
+	const zoomBtn = document.getElementById('zoom-btn');
+        const productGrid = document.getElementById('product-grid');
+
+        let zoomedIn = false;
+
+        zoomBtn.addEventListener('click', () => {
+            if (!zoomedIn) {
+                productGrid.style.gridTemplateColumns = "repeat(2, 1fr)";
+                zoomBtn.textContent = "Zoom Out";
+            } else {
+                productGrid.style.gridTemplateColumns = "repeat(4, 1fr)";
+                zoomBtn.textContent = "Zoom In";
+            }
+            zoomedIn = !zoomedIn;
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="brand-name">MyBrand</div>
+        <div class="nav-icons">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            <a href="search.html"><i class="fas fa-search"></i></a>
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                <div class="dropdown-content">
+                    <a href="about.html">ABOUT US</a>
+                    <a href="login.html"> LOGIN</a>
+                    <a href="contact.html"> CONTACT</a>
+                    <a href="highlight.html">Highlight</a>
+                    <a href="clothes.html">Clothes</a>
+                    <a href="accessories.html">Accessories</a>
+                    <a href="shoes.html">Shoes</a>
+                    <a href="bags.html">Bags</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Search Products</h1>
+        <div class="search-bar-container">
+            <input type="text" id="search-bar" placeholder="Search for products...">
+            <button id="search-button"><i class="fas fa-search"></i> Search</button>
+        </div>
+
+        <h2>Search Results</h2>
+        <div id="search-results" class="product-grid"></div>
+    </div>
+
+    <script>
+        // Simulated product data from accessories.html and clothes.html
+        const products = [
+            // Accessories products
+            { name: 'Dewdrop Dangles', category: 'Accessories', price: 299, image: 'img/E1.jpg' },
+            { name: 'Celestial Hoops', category: 'Accessories', price: 250, image: 'img/E2.jpg' },
+            { name: 'Sparkle Studs', category: 'Accessories', price: 300, image: 'img/E3.jpg' },
+            { name: 'Twilight Drops', category: 'Accessories', price: 150, image: 'img/E4.jpg' },
+
+            // Clothes products
+            { name: "Men's Jacket", category: 'Clothes', price: 150, image: 'miumiu-men1.jpg' },
+            { name: "Women's Dress", category: 'Clothes', price: 180, image: 'miumiu-women1.jpg' },
+            { name: "Men's Pants", category: 'Clothes', price: 120, image: 'hm-men2.jpg' },
+            { name: "Women's Skirt", category: 'Clothes', price: 80, image: 'hm-women2.jpg' },
+        ];
+
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.getElementById('search-button');
+        const searchResults = document.getElementById('search-results');
+
+        searchButton.addEventListener('click', () => {
+            const query = searchBar.value.toLowerCase();
+            searchResults.innerHTML = ''; // Clear previous results
+
+            const filteredProducts = products.filter(product =>
+                product.name.toLowerCase().includes(query) ||
+                product.category.toLowerCase().includes(query)
+            );
+
+            if (filteredProducts.length === 0) {
+                searchResults.innerHTML = '<p>No products found.</p>';
+                return;
+            }
+
+            filteredProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.classList.add('product');
+                productCard.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}" class="small-image">
+                        <h3>${product.name}</h3>
+                        <p>Category: ${product.category}</p>
+                        <p>Price: RM${product.price.toFixed(2)}</p>
+                        <button class="add-to-cart" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">Add to Cart</button>
+                    `;
+                searchResults.appendChild(productCard);
+            });
+
+            // Add "Add to Cart" functionality
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', event => {
+                    const name = button.getAttribute('data-name');
+                    const price = parseFloat(button.getAttribute('data-price'));
+                    const image = button.getAttribute('data-image');
+
+                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    const existingItem = cart.find(item => item.name === name);
+
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        cart.push({ name, price, image, quantity: 1 });
+                    }
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert(`${name} has been added to your cart!`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

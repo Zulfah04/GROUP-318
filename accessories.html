@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories</title>
+    <link rel="stylesheet" href="accessories.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="brand-name">MyBrand</div>
+        <div class="nav-icons">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            <a href="search.html"><i class="fas fa-search"></i></a>
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                <div class="dropdown-content">
+                    <a href="about.html">ABOUT US</a>
+                    <a href="login.html">LOGIN</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="highlight.html">Highlight</a>
+                    <a href="clothes.html">Clothes</a>
+                    <a href="accessories.html">Accessories</a>
+                    <a href="shoes.html">Shoes</a>
+                    <a href="bags.html">Bags</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1>Accessories</h1>
+    <!-- Accessories Section -->
+    <div class="accessories-section">
+        <!-- Earrings Section -->
+        <div class="earrings-section">
+            <h2>Earrings</h2>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="img/E1.jpg" alt="Earring 1">
+                        <div class="item-details">
+                            <div class="item-info">
+                                <div class="item-name">Dewdrop Dangles</div>
+                                <div class="item-price">RM 299.00</div>
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/E2.jpg" alt="Earring 2">
+                        <div class="item-details">
+                            <div class="item-info">
+                                <div class="item-name">Celestial Hoops</div>
+                                <div class="item-price">RM 250.00</div>
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/E3.jpg" alt="Earring 3">
+                        <div class="item-details">
+                            <div class="item-info">
+                                <div class="item-name"> Sparkle Studs</div>
+                                <div class="item-price">RM 300.00</div>
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/E4.jpg" alt="Earring 4">
+                        <div class="item-details">
+                            <div class="item-info">
+                                <div class="item-name">Twilight Drops</div>
+                                <div class="item-price">RM 150.00</div>
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <button class="prev" onclick="moveSlide('earrings', -1)">&#10094;</button>
+                <button class="next" onclick="moveSlide('earrings', 1)">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Bracelets Section -->
+        <div class="bracelets-section">
+            <h2>Bracelets</h2>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="img/B1.jpg" alt="Bracelet 1">
+                        <div class="item-details">
+                            <div class="item-info">
+                                <div class="item-name">Wrist Whisper</div>
+                                <div class="item-price">RM 450.00</div>
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/B2.jpg" alt="Bracelet 2">
+                        <div class="item-details">
+                            <div class="item-info">
+                                <div class="item-name">Silver Grace</div>
+                                <div class="item-price">RM 500.00</div>
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/B3.jpg" alt="Bracelet 3">
+                        <div class="item-details">
+                            <div class="item-info">
+                                <div class="item-name">Charm Cascade</div>
+                                <div class="item-price">RM 550.00</div>
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/B4.jpg" alt="Bracelet 4">
+                        <div class="item-details">
+                            <div class="item-info">
+                                <div class="item-name">Velvet Bond</div>
+                                <div class="item-price">RM 400.00</div>
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <button class="prev" onclick="moveSlide('bracelets', -1)">&#10094;</button>
+                <button class="next" onclick="moveSlide('bracelets', 1)">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Necklaces Section -->
+        <div class="necklaces-section">
+            <h2>Necklaces</h2>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="img/N1.jpg" alt="Necklace 1">
+                        <div class="item-details">
+                            <div class="item-info">
+                                <div class="item-name">Lustre Loop</div>
+                                <div class="item-price">RM 700.00</div>
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/N2.jpg" alt="Necklace 2">
+                        <div class="item-details">
+                            <div class="item-info">
+                                <div class="item-name">Moonlit Pendant</div>
+                                <div class="item-price">RM 750.00</div>
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/N3.jpg" alt="Necklace 3">
+                        <div class="item-details">
+                            <div class="item-info">
+                                <div class="item-name">Ethereal Thread</div>
+                                <div class="item-price">RM 800.00</div>
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/N4.jpg" alt="Necklace 4">
+                        <div class="item-details">
+                            <div class="item-info">
+                                <div class="item-name">Aurora Chime</div>
+                                <div class="item-price">RM 650.00</div>
+                            </div>
+                            <button class="add-to-cart"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <button class="prev" onclick="moveSlide('necklaces', -1)">&#10094;</button>
+                <button class="next" onclick="moveSlide('necklaces', 1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndices = { earrings: 0, bracelets: 0, necklaces: 0 };
+
+        function moveSlide(section, direction) {
+            const slides = document.querySelector(`.${section}-section .slides`);
+            const slideCount = slides.children.length;
+            slideIndices[section] = (slideIndices[section] + direction + slideCount) % slideCount;
+            slides.style.transform = `translateX(-${slideIndices[section] * 100}%)`;
+        }
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', event => {
+                    const product = event.target.closest('.item-details');
+                    const name = product.querySelector('.item-name').innerText;
+                    const price = parseFloat(product.querySelector('.item-price').innerText.replace('RM ', ''));
+                    const image = product.closest('.slide').querySelector('img').src;
+                    
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                    const existingItem = cart.find(item => item.name === name);
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        cart.push({ name, price, image, quantity: 1 });
+                    }
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert(`${name} has been added to your cart!`);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+

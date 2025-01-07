@@ -1,0 +1,215 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('img/model1.jpeg'); /* Make sure to replace with your hero image */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    position: relative;
+    position: relative; /* Ensure it can be layered with z-index */
+    z-index: 1;
+}
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+        z-index: 2;
+    }
+
+.hero-content {
+    z-index: 2; /* Ensure the content is above the overlay */
+}
+
+    .hero-content h1 {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+.cta-button {
+    background-color: #ff9900;
+    padding: 15px 30px; /* Increased padding for more space around text */
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Slightly larger text */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Space above the button */
+    margin-bottom: 20px; /* Space below the button */
+    display: inline-block; /* Makes sure the button doesn't stretch to fill space */
+}
+
+    .cta-button:hover {
+        background-color: #e68900;
+    }
+
+
+/* Featured Products */
+.featured-products {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+    .featured-products h2 {
+        color: black;
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #D2B48C;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Space between cards */
+}
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .product-card h3 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .product-card .price {
+        font-size: 16px;
+        color: #777;
+    }
+
+    .product-card a button {
+        background-color: #ff9900;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-bottom: 20px; /* Space below button */
+    }
+
+        .product-card a button:hover {
+            background-color: #e68900;
+        }
+
+/* Special Collections */
+.special-collections {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+    .special-collections h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+.collection-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.collection-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 45%;
+}
+
+    .collection-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .collection-item h3 {
+        font-size: 24px;
+        margin: 15px 0;
+    }
+
+    .collection-item p {
+        font-size: 16px;
+        color: #777;
+    }
+
+    .collection-item .cta-button {
+        margin-top: 20px;
+    }
+
+/* Promotions */
+.promotions {
+    background-color: #D2B48C;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.promo-banner {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+}
+
+    .promo-banner p {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
