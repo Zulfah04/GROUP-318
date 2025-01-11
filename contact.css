@@ -1,7 +1,10 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-}
+    background-image: url('img/p4.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background static on scroll */
 
 .navbar {
     display: flex;
@@ -96,7 +99,7 @@ body {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #ddd;
+            background-color: #e6ca9e;
             text-align: center;
             padding: 20px;
             border-radius: 8px;
