@@ -1,12 +1,16 @@
-/* General Reset */
-* {
-    margin: 0;
+#highlight {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     padding: 0;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    margin-top: 1290px; /* Space after highlight */
     box-sizing: border-box;
 }
 
 /* Body */
-body {
+#highlight {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     color: #333;
@@ -186,30 +190,3 @@ body {
     .collection-item .cta-button {
         margin-top: 20px;
     }
-
-/* Promotions */
-.promotions {
-    background-color: #D2B48C;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.promo-banner {
-    background-color: #333;
-    color: white;
-    padding: 30px 0;
-}
-
-    .promo-banner p {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 50px;
-}
