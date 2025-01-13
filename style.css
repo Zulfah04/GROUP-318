@@ -1,82 +1,75 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
 .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    align-items: center; /* Vertically center items */
+    padding: 10px 20px; /* Increased left and right padding for spacing */
     background-color: #333;
-    color: white;
+    color: #FFFFFF; /* Ensure bright contrast with the background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
 }
-
-.brand-name {
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: 'DM Serif Text', serif;
-}
-
 
 .nav-icons {
     display: flex;
-    align-items: center;
-    gap: 20px; 
+    gap: 30px; /* Space between navigation icons */
+    align-items: center; /* Ensure icons are vertically centered */
+    margin-right: 30px;
 }
 
-    .nav-icons a i {
-        font-size: 1.2rem;
+    .nav-icons a {
         color: white;
+        text-decoration: none;
+        font-size: 18px; /* Slightly increased font size for better visibility */
+        display: flex;
+        align-items: center; /* Center text and icon vertically */
+        transition: color 0.3s;
     }
 
-        .nav-icons a i:hover {
-            color: #ddd;
+        .nav-icons a:hover {
+            color: #ff6f61; /* Hover effect color */
         }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-    z-index: 10;
+        .nav-icons a.active {
+            color: #ff6f61;
+            font-weight: bold; /* Highlight active link */
+        }
+
+.brand-name {
+    font-size: 40px; /* Increase font size for the brand name */
+    font-weight: bold; /* Bold text for prominence */
+    color: white; /* Ensure the text color is white for visibility */
+    margin-right: 30px; /* Space between brand name and icons */
+    display: flex;
+    align-items: center; /* Vertically center brand name */
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    left: 60%; 
-    transform: translateX(-50%);
+/* Page section styling */
+.page-section {
+    padding: 50px 0;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100vh; /* Full height for each section */
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-family: 'DM Serif Text', serif;
-}
-
-    .dropdown-content a:hover {
-        background-color: #ddd;
+    .page-section::after {
+        content: "";
+        display: block;
+        clear: both;
     }
 
-    .dropdown-content a i.fas.fa-sign-in-alt,
-    .dropdown-content a i.fas.fa-envelope {
-        color: black; 
+    .page-section h2 {
+        margin-bottom: 20px;
     }
 
-.dropdown-content a[href="about.html"],
-    .dropdown-content a[href="login.html"],
-    .dropdown-content a[href="contact.html"] {
-        font-weight: bold; 
-    }
+/* Make space for fixed navbar */
+body {
+    margin: 0;
+}
 
 
 
