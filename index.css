@@ -1,94 +1,10 @@
-body {
-    margin: 0;
+.home {
+    padding: 100px 0; /* Add enough padding for content */
+    text-align: center;
+    position: relative;
+    height: auto; /* Set height dynamically based on content */
     font-family: Arial, sans-serif;
 }
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-}
-
-.brand-name {
-    font-size: 2rem; 
-    font-weight: bold;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-}
-
-.brand-name {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-
-.nav-icons {
-    display: flex;
-    align-items: center;
-    gap: 20px; 
-}
-
-    .nav-icons a i {
-        font-size: 1.2rem;
-        color: white;
-    }
-
-        .nav-icons a i:hover {
-            color: #ddd;
-        }
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    left: 60%; 
-    transform: translateX(-50%);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-    .dropdown-content a:hover {
-        background-color: #ddd;
-    }
-
-    .dropdown-content a i.fas.fa-sign-in-alt,
-    .dropdown-content a i.fas.fa-envelope {
-        color: black; 
-    }
-
-.dropdown-content a[href="about.html"],
-    .dropdown-content a[href="login.html"],
-    .dropdown-content a[href="contact.html"] {
-        font-weight: bold; 
-    }
-
 
 /* Slideshow Container */
 .slideshow {
@@ -96,6 +12,8 @@ body {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
+    margin-bottom: 0px; /* Add space below the slideshow */
+    z-index: 0;
 }
 
 /* Slides */
@@ -118,16 +36,39 @@ body {
     text-align: center;
 }
 
-/* Bestsellers Section */
-.bestsellers {
+.target {
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
 }
 
-    .bestsellers img {
-        width: 200px;
-        height: auto;
+.target-item {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+    .target-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .target-item span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
     }
 
 footer {
@@ -135,5 +76,5 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
 }
