@@ -1,12 +1,15 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
+#about {
+    position: relative;
+    font-family: 'Lora', serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 0; /* Padding inside the section */
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    margin-top: 400px; /* Space before about */
     box-sizing: border-box;
-    font-family: 'Lora', serif; /* Elegant serif font for glamour */
 }
 
-body {
+#about {
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
@@ -45,13 +48,13 @@ body {
     height: 100%;
 }
 
-.about-us-image-container img {
-    width: 100%;
-    height: 350px; /* Adjust image size */
-    object-fit: cover;
-    border-radius: 0; /* No rounded corners */
-    opacity: 1; /* Make image fully visible */
-}
+    .about-us-image-container img {
+        width: 100%;
+        height: 350px; /* Adjust image size */
+        object-fit: cover;
+        border-radius: 0; /* No rounded corners */
+        opacity: 1; /* Make image fully visible */
+    }
 
 .about-us-text-box {
     position: absolute;
@@ -67,26 +70,21 @@ body {
 }
 
 
-.about-us-text-box h1 {
-    font-size: 2.5rem;
-    color:maroon; 
-    font-weight: bold;
-    margin-bottom: 5px;
-     font-family: 'DM Serif Text', serif;
-    
+    .about-us-text-box h1 {
+        font-size: 2.5rem;
+        color: maroon;
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-family: 'DM Serif Text', serif;
+    }
 
-}
-
-.about-us-text-box p {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.6;
-    text-align: justify;
-    color: SaddleBrown;
-     
-
-    
-}
+    .about-us-text-box p {
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.6;
+        text-align: justify;
+        color: SaddleBrown;
+    }
 
 
 .our-history {
@@ -121,8 +119,8 @@ body {
 .our-history-container {
     position: relative;
     display: flex;
-    justify-content: center;  /* To center content horizontally */
-    align-items: flex-start;  /* Align image and box at top */
+    justify-content: center; /* To center content horizontally */
+    align-items: flex-start; /* Align image and box at top */
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
@@ -131,29 +129,29 @@ body {
 /* Image Container */
 .our-history-image-container {
     position: relative;
-    width: 600px;  /* Lebar gambar */
+    width: 600px; /* Lebar gambar */
     height: 350px; /* Tinggi gambar lebih tinggi daripada kotak */
-    margin-right: -60px;  /* Slight overlap with the box */
+    margin-right: -60px; /* Slight overlap with the box */
     z-index: 1;
-    margin-top: -30px;  /* Gambar sedikit naik ke atas */
+    margin-top: -30px; /* Gambar sedikit naik ke atas */
 }
 
-.our-history-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+    .our-history-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
 /* History Box */
 .history-box {
     position: relative;
     background-color: #ffffff;
     color: #333;
-    padding: 30px;  /* Kurangkan padding untuk mengecilkan kotak */
-    width: 600px;   /* Lebarkan sedikit kotak */
-    height: 350px;  /* Tinggi kotak lebih kecil daripada gambar */
+    padding: 30px; /* Kurangkan padding untuk mengecilkan kotak */
+    width: 600px; /* Lebarkan sedikit kotak */
+    height: 350px; /* Tinggi kotak lebih kecil daripada gambar */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -161,28 +159,26 @@ body {
     text-align: left;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-left: -20px;  /* Slight overlap with the image */
+    margin-left: -20px; /* Slight overlap with the image */
     z-index: 2;
-    margin-top: 30px;  /* Bawa kotak ke bawah sedikit */
+    margin-top: 30px; /* Bawa kotak ke bawah sedikit */
 }
 
-.history-box h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: maroon;
-   font-family: 'DM Serif Text', serif;
-}
+    .history-box h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: maroon;
+        font-family: 'DM Serif Text', serif;
+    }
 
-.history-box p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: black;
-  text-align: justify;
-  color: SaddleBrown;
- 	
-
-}
+    .history-box p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: black;
+        text-align: justify;
+        color: SaddleBrown;
+    }
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -211,13 +207,14 @@ body {
     background-color: #000; /* Set background color to black */
     padding: 50px 0;
     text-align: center;
+    margin: 0;
 }
 
-.team h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #e0d3c5;
-}
+    .team h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: #e0d3c5;
+    }
 
 /* Grid Layout for 5 images in one row */
 .team-grid {
@@ -241,19 +238,19 @@ body {
     max-width: 250px; /* Prevent large cards */
 }
 
-/* Hover effect */
-.team-member:hover {
-    transform: translateY(-10px); /* Lift the card on hover */
-}
+    /* Hover effect */
+    .team-member:hover {
+        transform: translateY(-10px); /* Lift the card on hover */
+    }
 
-.team-member img {
-    width: 80%;           /* Make images slightly smaller */
-    height: auto;         /* Maintain the aspect ratio */
-    max-width: 200px;     /* Set max-width to prevent images from being too large */
-    margin: 20px auto;    /* Center images with space at top and bottom */
-    display: block;
-    border-radius: 10px;  /* Add rounded corners to the image */
-}
+    .team-member img {
+        width: 80%; /* Make images slightly smaller */
+        height: auto; /* Maintain the aspect ratio */
+        max-width: 200px; /* Set max-width to prevent images from being too large */
+        margin: 20px auto; /* Center images with space at top and bottom */
+        display: block;
+        border-radius: 10px; /* Add rounded corners to the image */
+    }
 
 /* Info Box */
 .info-box {
@@ -264,16 +261,16 @@ body {
     height: auto; /* Let the height adjust based on content */
 }
 
-.info-box h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
+    .info-box h3 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
 
-.info-box p {
-    font-size: 0.9rem; /* Decrease font size slightly to fit content better */
-    margin-bottom: 10px;
-}
+    .info-box p {
+        font-size: 0.9rem; /* Decrease font size slightly to fit content better */
+        margin-bottom: 10px;
+    }
 
 /* Social Icons */
 .social-icons {
@@ -283,48 +280,25 @@ body {
     margin-top: 10px;
 }
 
-.social-icons a {
-    color: #e0d3c5;
-    font-size: 1.4rem;
-    text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
-}
+    .social-icons a {
+        color: #e0d3c5;
+        font-size: 1.4rem;
+        text-decoration: none;
+        transition: color 0.3s, transform 0.3s;
+    }
 
-.social-icons a:hover {
-    color: #f9a602;
-    transform: scale(1.1); /* Slightly increase the size on hover */
-}
+        .social-icons a:hover {
+            color: #f9a602;
+            transform: scale(1.1); /* Slightly increase the size on hover */
+        }
 
-}/* Why Choose Us Section */
-.why-choose-us {
-    padding: 50px 0;
-    background-color: #f8f8f8;
-    text-align: center;
-}
-
-.why-choose-us h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.why-choose-us ul {
-    list-style: none;
-    padding: 0;
-}
-
-.why-choose-us li {
-    font-size: 1.2rem;
-    color: #333;
-    margin: 10px 0;
-}
 
 footer {
     background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 0;
 }
 
     footer p {
